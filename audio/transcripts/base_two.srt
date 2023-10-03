@@ -1,0 +1,211 @@
+1MM
+00:00:00,120 --> 00:00:04,360
+Unit 1, page 12, conversation listening.
+
+2MM
+00:00:05,560 --> 00:00:06,560
+Conversation 1.
+
+3MM
+00:00:09,660 --> 00:00:10,920
+So, nice to meet you.
+
+4FF
+00:00:11,180 --> 00:00:11,760
+You too.
+
+5MM
+00:00:12,080 --> 00:00:12,780
+Where are you from?
+
+6FF
+00:00:12,980 --> 00:00:14,060
+From? I'm from here.
+
+7FF
+00:00:14,400 --> 00:00:15,340
+Well, near here.
+
+8FF
+00:00:15,720 --> 00:00:18,480
+I live just outside the city in the suburbs with my family.
+
+9MM
+00:00:18,760 --> 00:00:20,180
+The suburbs, that's nice.
+
+10MM
+00:00:20,360 --> 00:00:21,340
+And do you have a hobby?
+
+11FF
+00:00:21,700 --> 00:00:23,220
+Who has time for hobbies?
+
+12FF
+00:00:24,160 --> 00:00:26,380
+Um, I guess I like studying.
+
+13MM
+00:00:26,760 --> 00:00:27,320
+Studying?
+
+14FF
+00:00:27,440 --> 00:00:34,320
+Yeah, well, that's what I do most of the time. I want to work, get a good job later. So studying is what I'm into right now.
+
+15MM
+00:00:34,580 --> 00:00:35,900
+Well, good luck with that.
+
+16FF
+00:00:36,180 --> 00:00:37,400
+Thanks. How about you?
+
+17MM
+00:00:37,640 --> 00:00:40,720
+Me? I like to draw and design stuff.
+
+18MM
+00:00:44,100 --> 00:00:45,240
+Conversation 2.
+
+19FF
+00:00:49,100 --> 00:00:51,520
+So, do you live by yourself or with your family?
+
+20FF
+00:00:51,680 --> 00:00:54,660
+I live alone. I got an apartment in the center of the city.
+
+21FF
+00:00:55,140 --> 00:00:55,440
+Downtown?
+
+22FF
+00:00:55,580 --> 00:00:59,500
+Yeah, right. It's not so convenient, but, um, it's okay.
+
+23FF
+00:01:00,280 --> 00:01:01,820
+I miss my family sometimes.
+
+24FF
+00:01:02,100 --> 00:01:02,480
+Really?
+
+25FF
+00:01:02,880 --> 00:01:05,680
+Yeah, except for my brother and his guitar.
+
+26FF
+00:01:06,160 --> 00:01:08,360
+It's so noisy. Pardon me?
+SHOULD BE SPLIT
+
+27FF
+00:01:08,620 --> 00:01:10,280
+I said I don't miss my brother.
+
+28FF
+00:01:10,680 --> 00:01:13,000
+Now I can listen to the music that I really want to.
+
+29FF
+00:01:13,220 --> 00:01:15,400
+Because you have your own place. That's right.
+SHOULD BE SPLIT
+
+30MM
+00:01:20,380 --> 00:01:21,600
+Conversation 3.
+
+31MM
+00:01:24,140 --> 00:01:31,200
+So, how about you? Do you live near here too? No, I wish. My home, my family is way out in the country.
+SHOULD BE SPLIT F THEN M		     /
+
+32FF
+00:01:31,620 --> 00:01:34,580
+A rural area? You couldn't get an apartment close to here?
+
+33MM
+00:01:34,720 --> 00:01:40,520
+No, I can't afford to. So I commute back and forth. It takes over two hours.
+
+34FF
+00:01:40,620 --> 00:01:42,700
+Oh my gosh, two hours?
+
+35MM
+00:01:42,900 --> 00:01:47,140
+But it's okay. I can watch movies and TV programs on my video player.
+
+36FF
+00:01:47,660 --> 00:01:49,600
+Ah, so you're into movies. Cool.
+
+37MM
+00:01:49,620 --> 00:01:55,520
+I used to play video games with my brother at home, but now I'm almost never at home.
+
+38FF
+00:01:55,620 --> 00:01:56,640
+Yeah, I see.
+
+39MM
+00:02:01,540 --> 00:02:02,200
+Conversation 4.
+
+40FF
+00:02:05,240 --> 00:02:06,960
+Hey, I saw you on the train earlier today.
+
+41MM
+00:02:07,120 --> 00:02:07,660
+Oh yeah?
+
+42FF
+00:02:07,980 --> 00:02:09,540
+So, I guess you live far from here?
+
+43MM
+00:02:09,880 --> 00:02:16,980
+No, no, no, no. Actually, I live in a neighborhood, uh, not too far. Kind of, you know, nearby.
+
+44MM X F
+00:02:17,140 --> 00:02:17,600
+Pardon me?
+
+45MM
+00:02:17,620 --> 00:02:20,300
+I said I live nearby, with my family.
+
+46FF
+00:02:20,600 --> 00:02:22,380
+So, why were you on the train earlier?
+
+47MM
+00:02:22,780 --> 00:02:25,300
+I was hanging out with my friends a little while ago.
+
+48MM
+00:02:25,700 --> 00:02:27,620
+That's pretty much what I do in my free time.
+
+49FF
+00:02:27,760 --> 00:02:29,380
+Hanging out with friends? Me too.
+
+50MM X F
+00:02:29,800 --> 00:02:31,560
+I don't like being alone.
+
+51MM
+00:02:31,560 --> 00:02:32,240
+Alone, yeah.
+
+52FF
+00:02:32,620 --> 00:02:32,940
+Exactly.
+
