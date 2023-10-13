@@ -1,0 +1,219 @@
+﻿Model: "sequential"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ dense (Dense)               (None, 256)               33024     
+                                                                 
+ dropout (Dropout)           (None, 256)               0         
+                                                                 
+ dense_1 (Dense)             (None, 256)               65792     
+                                                                 
+ dropout_1 (Dropout)         (None, 256)               0         
+                                                                 
+ dense_2 (Dense)             (None, 128)               32896     
+                                                                 
+ dropout_2 (Dropout)         (None, 128)               0         
+                                                                 
+ dense_3 (Dense)             (None, 128)               16512     
+                                                                 
+ dropout_3 (Dropout)         (None, 128)               0         
+                                                                 
+ dense_4 (Dense)             (None, 64)                8256      
+                                                                 
+ dropout_4 (Dropout)         (None, 64)                0         
+                                                                 
+ dense_5 (Dense)             (None, 1)                 65        
+                                                                 
+=================================================================
+Total params: 156545 (611.50 KB)
+Trainable params: 156545 (611.50 KB)
+Non-trainable params: 0 (0.00 Byte)
+_________________________________________________________________
+
+Audio 1
+Speaker Brennan-M
+00:00:000 - 00:01:000
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 0s 413ms/step
+Result: Male
+Probabilities:     Male: 96.01%    Female: 3.99%
+
+Audio 2
+Speaker Brennan-F
+00:01:000 - 00:05:340
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 0s 32ms/step
+Result: Male
+Probabilities:     Male: 91.91%    Female: 8.09%
+
+Audio 3
+Speaker Siobhan
+00:05:500 - 00:06:480
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 0s 37ms/step
+Result: Female
+Probabilities:     Male: 49.58%    Female: 50.42%
+
+Audio 4
+Speaker Brennan-F
+00:06:740 - 00:10:640
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 0s 83ms/step
+Result: Female
+Probabilities:     Male: 4.20%    Female: 95.80%
+
+Audio 5
+Speaker Siobhan
+00:10:640 - 00:12:280
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 0s 51ms/step
+Result: Female
+Probabilities:     Male: 12.94%    Female: 87.06%
+
+Audio 6
+Speaker Brennan-M
+00:13:140 - 00:17:980
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 0s 69ms/step
+Result: Male
+Probabilities:     Male: 90.52%    Female: 9.48%
+
+Audio 7
+Speaker Siobhan
+00:19:640 - 00:19:800
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 0s 47ms/step
+Result: Female
+Probabilities:     Male: 40.35%    Female: 59.65%
+
+Audio 8
+Speaker Brennan-M
+00:20:240 - 00:21:320
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 0s 36ms/step
+Result: Male
+Probabilities:     Male: 93.87%    Female: 6.13%
+
+Audio 9
+Speaker Siobhan
+00:21:620 - 00:24:360
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 0s 16ms/step
+Result: Female
+Probabilities:     Male: 16.33%    Female: 83.67%
+
+Audio 10
+Speaker Emily
+00:24:560 - 00:25:920
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 0s 52ms/step
+Result: Female
+Probabilities:     Male: 5.00%    Female: 95.00%
+
+Audio 11
+Speaker Brennan-M
+00:26:760 - 00:28:120
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 0s 114ms/step
+Result: Female
+Probabilities:     Male: 12.73%    Female: 87.27%
+
+Audio 12
+Speaker Emily
+00:30:000 - 00:33:620
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 0s 66ms/step
+Result: Female
+Probabilities:     Male: 18.68%    Female: 81.32%
+
+Audio 13
+Speaker Siobhan
+00:33:620 - 00:36:820
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 0s 37ms/step
+Result: Female
+Probabilities:     Male: 18.00%    Female: 82.00%
+
+Audio 14
+Speaker Murph
+00:36:915 - 00:38:000
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 0s 32ms/step
+Result: Female
+Probabilities:     Male: 17.72%    Female: 82.28%
+
+Audio 15
+Speaker Siobhan
+00:38:440 - 00:39:630
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 0s 34ms/step
+Result: Female
+Probabilities:     Male: 1.20%    Female: 98.80%
+
+Audio 16
+Speaker Ally
+00:39:440 - 00:41:080
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 0s 32ms/step
+Result: Female
+Probabilities:     Male: 8.48%    Female: 91.52%
+
+Audio 17
+Speaker Lou
+00:41:520 - 00:42:660
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 0s 32ms/step
+Result: Female
+Probabilities:     Male: 11.19%    Female: 88.81%
+
+Speaker: Brennan-M
+Instances: 4
+Male: 73.28%
+Female 26.72%
+
+Speaker: Brennan-F
+Instances: 2
+Male: 48.06%
+Female 51.94%
+
+Speaker: Siobhan
+Instances: 6
+Male: 23.07%
+Female 76.93%
+
+Speaker: Emily
+Instances: 2
+Male: 11.84%
+Female 88.16%
+
+Speaker: Murph
+Instances: 1
+Male: 17.72%
+Female 82.28%
+
+Speaker: Ally
+Instances: 1
+Male: 8.48%
+Female 91.52%
+
+Speaker: Lou
+Instances: 1
+Male: 11.19%
+Female 88.81%

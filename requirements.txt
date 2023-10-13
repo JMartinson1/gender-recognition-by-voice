@@ -6,3 +6,4 @@ tqdm
 pyaudio
 librosa
 pydub
+matplotlib
