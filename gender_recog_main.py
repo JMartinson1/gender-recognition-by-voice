@@ -30,10 +30,10 @@ def int_to_stamp(time_int: int) -> str:
 def process(transcript: str, audio: AudioSegment) -> str:
     # Process transcript for timestamps and speaker data
     timestamps = list(filter(None, transcript.split("\r\n")))
-    speaker_dict = {}
-    timestamps = [i.strip().split(", ") for i in timestamps]
-    for segment in timestamps:
-        timestamps[timestamps.index(segment)] = [stamp_to_int(i) if (":" in i) else i for i in segment]
+    speaker_dict: dict = {}
+    timestamps_list: list = [i.strip().split(", ") for i in timestamps]
+    for segment in timestamps_list:
+        timestamps_list[timestamps_list.index(segment)] = [stamp_to_int(i) if (":" in i) else i for i in segment]
         if segment[-1] not in speaker_dict:
             speaker_dict.update({segment[-1]: []})
 
@@ -42,9 +42,11 @@ def process(transcript: str, audio: AudioSegment) -> str:
     model.load_weights("gender_recognition\\results\\model.h5")
 
     # Processing audio chunks
-    for snippet in timestamps:
+    for snippet in timestamps_list:
         # Console output
-        start, end, speaker = snippet[0], snippet[1], snippet[2]
+        start = int(snippet[0])
+        end = int(snippet[1])
+        speaker = str(snippet[2])
         # Create chunk -> bytes to process
         audio_chunk = audio[start:end]
         chunk_buffer = io.BytesIO()

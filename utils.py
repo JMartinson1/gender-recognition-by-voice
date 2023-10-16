@@ -13,7 +13,8 @@ label2int = {"male": 1, "female": 0}
 def load_data(vector_length=128):
     """A function to load gender recognition dataset from `data` folder
     After the second run, this will load from results/features.npy and results/labels.npy files
-    as it is much faster!"""
+    as it is much faster!.
+    """
     # make sure results folder exists
     if not os.path.isdir("results"):
         os.mkdir("results")

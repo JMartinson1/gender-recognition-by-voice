@@ -8,16 +8,15 @@ from tqdm import tqdm
 
 
 def extract_feature(file_name, **kwargs):
-    """
-    Extract feature from audio file `file_name`
-        Features supported:
-            - MFCC (mfcc)
-            - Chroma (chroma)
-            - MEL Spectrogram Frequency (mel)
-            - Contrast (contrast)
-            - Tonnetz (tonnetz)
-        e.g:
-        `features = extract_feature(path, mel=True, mfcc=True)`
+    """Extract feature from audio file `file_name`
+    Features supported:
+    - MFCC (mfcc)
+    - Chroma (chroma)
+    - MEL Spectrogram Frequency (mel)
+    - Contrast (contrast)
+    - Tonnetz (tonnetz)
+    e.g:
+    `features = extract_feature(path, mel=True, mfcc=True)`.
     """
     mfcc = kwargs.get("mfcc")
     chroma = kwargs.get("chroma")
@@ -35,7 +34,7 @@ def extract_feature(file_name, **kwargs):
         chroma = np.mean(librosa.feature.chroma_stft(S=stft, sr=sample_rate).T, axis=0)
         result = np.hstack((result, chroma))
     if mel:
-        mel = np.mean(librosa.feature.melspectrogram(X, sr=sample_rate).T, axis=0)
+        mel = np.mean(librosa.feature.melspectrogram(y=X, sr=sample_rate).T, axis=0)
         result = np.hstack((result, mel))
     if contrast:
         contrast = np.mean(librosa.feature.spectral_contrast(S=stft, sr=sample_rate).T, axis=0)
