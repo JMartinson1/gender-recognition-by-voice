@@ -1,7 +1,5 @@
-import os
-from tensorflow.keras.callbacks import ModelCheckpoint, TensorBoard, EarlyStopping
-
-from utils import load_data, split_data, create_model
+from tensorflow.python.keras.callbacks import EarlyStopping, TensorBoard
+from utils import create_model, load_data, split_data
 
 # load the dataset
 X, y = load_data()
@@ -19,8 +17,14 @@ batch_size = 64
 epochs = 100
 
 # train the model using the training set and validating using validation set
-model.fit(data["X_train"], data["y_train"], epochs=epochs, batch_size=batch_size, validation_data=(data["X_valid"], data["y_valid"]),
-          callbacks=[tensorboard, early_stopping])
+model.fit(
+    data["X_train"],
+    data["y_train"],
+    epochs=epochs,
+    batch_size=batch_size,
+    validation_data=(data["X_valid"], data["y_valid"]),
+    callbacks=[tensorboard, early_stopping],
+)
 
 # save the model to a file
 model.save("results/model.h5")
@@ -30,4 +34,3 @@ print(f"Evaluating the model using {len(data['X_test'])} samples...")
 loss, accuracy = model.evaluate(data["X_test"], data["y_test"], verbose=0)
 print(f"Loss: {loss:.4f}")
 print(f"Accuracy: {accuracy*100:.2f}%")
-

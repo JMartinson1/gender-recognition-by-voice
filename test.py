@@ -1,8 +1,5 @@
 import librosa
 import numpy as np
-from pydub import AudioSegment
-import soundfile as sf
-import io
 
 
 def extract_feature(chunk_buffer, **kwargs):
@@ -31,16 +28,16 @@ def extract_feature(chunk_buffer, **kwargs):
         mfccs = np.mean(librosa.feature.mfcc(y=X, sr=sample_rate, n_mfcc=40).T, axis=0)
         result = np.hstack((result, mfccs))
     if chroma:
-        chroma = np.mean(librosa.feature.chroma_stft(S=stft, sr=sample_rate).T,axis=0)
+        chroma = np.mean(librosa.feature.chroma_stft(S=stft, sr=sample_rate).T, axis=0)
         result = np.hstack((result, chroma))
     if mel:
-        mel = np.mean(librosa.feature.melspectrogram(y=X, sr=sample_rate).T,axis=0)
+        mel = np.mean(librosa.feature.melspectrogram(y=X, sr=sample_rate).T, axis=0)
         result = np.hstack((result, mel))
     if contrast:
-        contrast = np.mean(librosa.feature.spectral_contrast(S=stft, sr=sample_rate).T,axis=0)
+        contrast = np.mean(librosa.feature.spectral_contrast(S=stft, sr=sample_rate).T, axis=0)
         result = np.hstack((result, contrast))
     if tonnetz:
-        tonnetz = np.mean(librosa.feature.tonnetz(y=librosa.effects.harmonic(X), sr=sample_rate).T,axis=0)
+        tonnetz = np.mean(librosa.feature.tonnetz(y=librosa.effects.harmonic(X), sr=sample_rate).T, axis=0)
         result = np.hstack((result, tonnetz))
     return result
 

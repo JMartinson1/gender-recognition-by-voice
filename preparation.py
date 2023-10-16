@@ -1,9 +1,9 @@
 import glob
 import os
-import pandas as pd
-import numpy as np
-import shutil
+
 import librosa
+import numpy as np
+import pandas as pd
 from tqdm import tqdm
 
 
@@ -32,18 +32,19 @@ def extract_feature(file_name, **kwargs):
         mfccs = np.mean(librosa.feature.mfcc(y=X, sr=sample_rate, n_mfcc=40).T, axis=0)
         result = np.hstack((result, mfccs))
     if chroma:
-        chroma = np.mean(librosa.feature.chroma_stft(S=stft, sr=sample_rate).T,axis=0)
+        chroma = np.mean(librosa.feature.chroma_stft(S=stft, sr=sample_rate).T, axis=0)
         result = np.hstack((result, chroma))
     if mel:
-        mel = np.mean(librosa.feature.melspectrogram(X, sr=sample_rate).T,axis=0)
+        mel = np.mean(librosa.feature.melspectrogram(X, sr=sample_rate).T, axis=0)
         result = np.hstack((result, mel))
     if contrast:
-        contrast = np.mean(librosa.feature.spectral_contrast(S=stft, sr=sample_rate).T,axis=0)
+        contrast = np.mean(librosa.feature.spectral_contrast(S=stft, sr=sample_rate).T, axis=0)
         result = np.hstack((result, contrast))
     if tonnetz:
-        tonnetz = np.mean(librosa.feature.tonnetz(y=librosa.effects.harmonic(X), sr=sample_rate).T,axis=0)
+        tonnetz = np.mean(librosa.feature.tonnetz(y=librosa.effects.harmonic(X), sr=sample_rate).T, axis=0)
         result = np.hstack((result, tonnetz))
     return result
+
 
 dirname = "data"
 
@@ -60,10 +61,10 @@ for j, csv_file in enumerate(csv_files):
     new_df = df[["filename", "gender"]]
     print("Previously:", len(new_df), "rows")
     # take only male & female genders (i.e droping NaNs & 'other' gender)
-    new_df = new_df[np.logical_or(new_df['gender'] == 'female', new_df['gender'] == 'male')]
+    new_df = new_df[np.logical_or(new_df["gender"] == "female", new_df["gender"] == "male")]
     print("Now:", len(new_df), "rows")
     new_csv_file = os.path.join(dirname, csv_file)
-    # save new preprocessed CSV 
+    # save new preprocessed CSV
     new_df.to_csv(new_csv_file, index=False)
     # get the folder name
     folder_name, _ = csv_file.split(".")
@@ -78,7 +79,7 @@ for j, csv_file in enumerate(csv_files):
             # print("Copyying", audio_filename, "...")
             src_path = f"{folder_name}/{audio_filename}"
             target_path = f"{dirname}/{audio_filename}"
-            #create that folder if it doesn't exist
+            # create that folder if it doesn't exist
             if not os.path.isdir(os.path.dirname(target_path)):
                 os.mkdir(os.path.dirname(target_path))
             features = extract_feature(src_path, mel=True)
