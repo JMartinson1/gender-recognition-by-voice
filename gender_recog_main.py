@@ -27,7 +27,7 @@ def int_to_stamp(time_int: int) -> str:
     return stamp_output
 
 
-def process(transcript: str, audio: AudioSegment) -> str:
+def process(transcript: str, audio: AudioSegment) -> dict:
     # Process transcript for timestamps and speaker data
     timestamps = list(filter(None, transcript.split("\r\n")))
     speaker_dict: dict = {}
@@ -35,7 +35,7 @@ def process(transcript: str, audio: AudioSegment) -> str:
     for segment in timestamps_list:
         timestamps_list[timestamps_list.index(segment)] = [stamp_to_int(i) if (":" in i) else i for i in segment]
         if segment[-1] not in speaker_dict:
-            speaker_dict.update({segment[-1]: []})
+            speaker_dict.update({segment[-1]: {"probs":[]}})
 
     # Load model
     model = create_model()
@@ -53,16 +53,19 @@ def process(transcript: str, audio: AudioSegment) -> str:
         audio_chunk.export(chunk_buffer, format="mp3")
         # Test chunk, add probability to speaker_dict
         temp_male_prob = test_process(chunk_buffer, model)[0]
-        speaker_dict[speaker].append(temp_male_prob)
+        # speaker_dict[speaker].append(temp_male_prob)
+        speaker_dict[speaker]["probs"].append(temp_male_prob)
 
-    # Average speaker probabilities and string output
-    output = ""
+    # Average speaker probabilities and dict output
     for speaker in speaker_dict:
-        total_male_prob = sum(speaker_dict[speaker])
-        prob_instances = len(speaker_dict[speaker])
+        total_male_prob = sum(speaker_dict[speaker]["probs"])
+        prob_instances = len(speaker_dict[speaker]["probs"])
         avg_male_prob = (total_male_prob / prob_instances) * 100
         avg_female_prob = 100 - avg_male_prob
-        output += "\nSpeaker: {0}\nInstances: {1}\nMale: {2:.2f}%\nFemale {3:.2f}%\n".format(
-            speaker, prob_instances, avg_male_prob, avg_female_prob
-        )
-    return output
+        results_dict = {
+            "instances": prob_instances,
+            "average_male_prob": avg_male_prob,
+            "average_female_prob": avg_female_prob
+            }
+        speaker_dict[speaker].update(results_dict)
+    return speaker_dict
