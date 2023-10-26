@@ -53,7 +53,6 @@ def process(transcript: str, audio: AudioSegment) -> dict:
         audio_chunk.export(chunk_buffer, format="mp3")
         # Test chunk, add probability to speaker_dict
         temp_male_prob = test_process(chunk_buffer, model)[0]
-        # speaker_dict[speaker].append(temp_male_prob)
         speaker_dict[speaker]["probs"].append(temp_male_prob)
 
     # Average speaker probabilities and dict output

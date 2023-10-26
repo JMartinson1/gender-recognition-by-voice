@@ -44,11 +44,7 @@ def extract_feature(chunk_buffer, **kwargs):
 def process(chunk_buffer, model):
     # extract features and reshape it
     features = extract_feature(chunk_buffer, mel=True).reshape(1, -1)
-    # predict the gender!
-    male_prob = model.predict(features)[0][0]
+    # predict the gender
+    male_prob = model(features)[0][0].numpy()
     female_prob = 1 - male_prob
-    gender = "Male" if male_prob > female_prob else "Female"
-    # show the result!
-    print("Result:", gender)
-    print(f"Probabilities:     Male: {male_prob*100:.2f}%    Female: {female_prob*100:.2f}%")
     return male_prob, female_prob
